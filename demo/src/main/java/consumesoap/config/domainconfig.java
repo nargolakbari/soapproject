@@ -22,7 +22,9 @@ public domainclient soapConnector(Jaxb2Marshaller marshaller) {
     client.setDefaultUri("http://localhost:8080/gics/gicsService");
     client.setMarshaller(marshaller);
     client.setUnmarshaller(marshaller);
-return client;
+    return client;
 }
+
+
 
 }

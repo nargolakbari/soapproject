@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/mypro")
 public class testpost {
     @PostMapping("/postbody")
-    public String postBody(@RequestBody String fullName) {
-        return "Hello dear" + fullName;
+    public String postBody(@RequestBody String fullName, String fullName3) {
+        return "Hello dear" + fullName + fullName3;
     
 }
 }
