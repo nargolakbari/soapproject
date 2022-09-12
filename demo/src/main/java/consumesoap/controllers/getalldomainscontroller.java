@@ -16,28 +16,19 @@ import consumesoap.classes.*;
 import consumesoap.soapclient.stubs.*;
 import consumesoap.soapclient.stubs.ListDomainsResponse.Return;
 import consumesoap.config.*;
-
-
 @RestController
 @RequestMapping("/gics")
-public class getdomaincontroller {
-
+public class getalldomainscontroller {
     @Autowired
-    private domainclient client; 
-    private allofdomainsclient listclient;
-  
-    @PostMapping("/getdomain")
-     public DomainDTO showdomain(@RequestBody String dName){
+    allofdomainsclient client; 
+    @PostMapping("/getalldomains")
+    public JAXBElement<Return> listalldom(){
         ObjectFactory objectFactory = new ObjectFactory();
-        GetDomain type = new GetDomain();
-        type.setDomainName(dName);
         
-
-        GetDomainResponse response = client.getdomain("http://localhost:8080/gics/gicsService",
-        objectFactory.createGetDomain(type));//.createGetBank(type));
-        return response.getReturn();//
+        ListDomains value=new ListDomains();
+        ListDomainsResponse response1= client.getalldomain("http://localhost:8080/gics/gicsService",
+        objectFactory.createListDomains(value));
+        return response1.getReturn();
 
     }
-   
-    
 }
