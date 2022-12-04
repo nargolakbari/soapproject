@@ -29,7 +29,7 @@ public class listmadulecontroller {
         ListModules type=new ListModules();
         type.setDomainName(dName);
         type.setOnlyFinal(true);
-        ListModulesResponse response = client.getallmadulelist("http://localhost:8080/gics/gicsService", 
+        ListModulesResponse response = client.getallmadulelist("http://192.168.0.106:8085/gics/gicsService", 
         objectFactory.createListModules(type));
         return response.getReturn();
         

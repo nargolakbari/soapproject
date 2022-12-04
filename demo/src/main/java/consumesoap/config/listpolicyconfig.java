@@ -6,7 +6,7 @@ import consumesoap.classes.*;
 import consumesoap.soapclient.stubs.*;
 @Configuration
 public class listpolicyconfig {
-    @Bean
+@Bean
 public Jaxb2Marshaller marshaller2()  {
 Jaxb2Marshaller marshaller2 = new Jaxb2Marshaller();
 marshaller2.setContextPath("consumesoap.soapclient.stubs");

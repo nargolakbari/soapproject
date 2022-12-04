@@ -26,7 +26,7 @@ public class getalldomainscontroller {
         ObjectFactory objectFactory = new ObjectFactory();
         
         ListDomains value=new ListDomains();
-        ListDomainsResponse response1= client.getalldomain("http://localhost:8080/gics/gicsService",
+        ListDomainsResponse response1= client.getalldomain("http://192.168.0.106:8085/gics/gicsService",
         objectFactory.createListDomains(value));
         return response1.getReturn();
 

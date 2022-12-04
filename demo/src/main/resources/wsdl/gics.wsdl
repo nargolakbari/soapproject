@@ -4908,7 +4908,7 @@
 </wsdl:binding>
 <wsdl:service name="GICSServiceImplService">
   <wsdl:port binding="tns:GICSServiceImplServiceSoapBinding" name="gicsServicePort">
-    <soap:address location="http://localhost:8080/gics/gicsService"/>
+    <soap:address location="http://192.168.0.106:8085/gics/gicsService"/>
   </wsdl:port>
 </wsdl:service>
 </wsdl:definitions>

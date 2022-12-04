@@ -29,12 +29,12 @@ public class listpolicycontroller {
         ListPolicies type=new ListPolicies();
         type.setDomainName(dName);
         type.setOnlyFinal(true);
-       
-        ListPoliciesResponse response = client.getallpolicylist("http://localhost:8080/gics/gicsService", 
+       //ListPoliciesResponse response = client.getallpolicylist("http://localhost:8080/gics/gicsService",
+        ListPoliciesResponse response = client.getallpolicylist("http://192.168.0.106:8085/gics/gicsService", 
         objectFactory.createListPolicies(type));
         return response.getReturn();
-        
+  
 } 
 
-    
+
 }

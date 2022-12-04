@@ -33,7 +33,7 @@ public class getdomaincontroller {
         type.setDomainName(dName);
         
 
-        GetDomainResponse response = client.getdomain("http://localhost:8080/gics/gicsService",
+        GetDomainResponse response = client.getdomain("http://192.168.0.106:8085/gics/gicsService",
         objectFactory.createGetDomain(type));//.createGetBank(type));
         return response.getReturn();//
 
